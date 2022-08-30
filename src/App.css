@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -36,3 +40,37 @@
     transform: rotate(360deg);
   }
 }
+
+.logo {
+  padding: 10px;
+}
+
+.logo-image {
+  text-align: center;
+  padding: 30px 40px;
+  border: 1px solid #afafaf;
+  border-radius: 10px;
+  height: 100%;
+  position: relative;
+  transition: all .3s ease-in;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: none;
+  transition: .3s ease;
+  background-color: #393839;
+}
+
+.logo-image:hover .overlay {
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
